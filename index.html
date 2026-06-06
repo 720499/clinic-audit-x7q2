@@ -16,42 +16,35 @@
   }
   *{box-sizing:border-box;}
   html{-webkit-text-size-adjust:100%;}
-  body{
-    margin:0; background:var(--c-bg); color:var(--c-body);
-    font-family:'PT Sans',sans-serif; font-size:17px; line-height:1.62;
-    -webkit-font-smoothing:antialiased;
-  }
-  .wrap{max-width:840px; margin:0 auto; padding:0 24px;}
+  body{margin:0; background:var(--c-bg); color:var(--c-body);
+    font-family:'PT Sans',sans-serif; font-size:17px; line-height:1.62; -webkit-font-smoothing:antialiased;}
+  .wrap{max-width:860px; margin:0 auto; padding:0 24px;}
   h1,h2,h3{font-family:'PT Serif',serif; color:var(--c-text); font-weight:700; letter-spacing:-0.01em;}
   h1{font-size:34px; line-height:1.18; margin:0 0 14px;}
   h2{font-size:25px; line-height:1.25; margin:0 0 6px;}
   h3{font-size:18px; margin:0 0 6px;}
   p{margin:0 0 14px;}
-  a{color:var(--c-accent); text-decoration:none;}
-  .eyebrow{font-family:'PT Sans',sans-serif; font-weight:700; font-size:12px;
-    text-transform:uppercase; letter-spacing:0.14em; color:var(--c-accent); margin:0 0 12px;}
+  a{color:var(--c-accent); text-decoration:none; border-bottom:1px solid rgba(11,31,58,.25);}
+  a:hover{border-bottom-color:var(--c-accent);}
+  .eyebrow{font-family:'PT Sans',sans-serif; font-weight:700; font-size:12px; text-transform:uppercase;
+    letter-spacing:0.14em; color:var(--c-accent); margin:0 0 12px;}
 
-  /* Hero */
   header.hero{padding:64px 0 40px; border-bottom:1px solid var(--c-rule);}
   .hero .meta{font-size:15px; color:var(--c-muted); margin:0;}
-  .hero .lead{font-size:18px; color:var(--c-body); margin:18px 0 0; max-width:680px;}
+  .hero .lead{font-size:18px; color:var(--c-body); margin:18px 0 0; max-width:700px;}
   .hero .stamp{display:inline-block; margin-top:22px; font-size:14px; color:var(--c-muted);
     border-left:2px solid var(--c-accent); padding:4px 0 4px 14px;}
 
-  /* Sections */
   section{padding:42px 0; border-bottom:1px solid var(--c-hairline);}
   section:last-of-type{border-bottom:none;}
-  .lead-p{font-size:17px; color:var(--c-body); margin:0 0 22px; max-width:700px;}
+  .lead-p{font-size:17px; color:var(--c-body); margin:0 0 22px; max-width:720px;}
 
-  /* Strengths list */
   ul.clean{list-style:none; margin:0; padding:0;}
   ul.clean li{padding:14px 0; border-bottom:1px solid var(--c-hairline); display:flex; gap:16px;}
   ul.clean li:last-child{border-bottom:none;}
-  ul.clean .n{font-family:'PT Serif',serif; font-weight:700; color:var(--c-accent); font-size:16px; min-width:78px;}
-  ul.clean .t{flex:1;}
-  ul.clean .t b{color:var(--c-text);}
+  ul.clean .n{font-family:'PT Serif',serif; font-weight:700; color:var(--c-accent); font-size:15px; min-width:96px;}
+  ul.clean .t{flex:1;} ul.clean .t b{color:var(--c-text);}
 
-  /* Presence table */
   .tablewrap{overflow-x:auto; margin:0 -2px;}
   table{width:100%; border-collapse:collapse; font-size:15px; min-width:560px;}
   th,td{text-align:left; padding:11px 12px; border-bottom:1px solid var(--c-hairline); vertical-align:top;}
@@ -61,7 +54,6 @@
   td.s-norm{color:var(--c-body); white-space:nowrap;}
   td.s-grow{color:var(--c-text); font-weight:700; white-space:nowrap;}
 
-  /* Opportunity cards */
   .opp{padding:20px 0; border-bottom:1px solid var(--c-hairline);}
   .opp:last-child{border-bottom:none;}
   .opp h3{margin-bottom:6px;}
@@ -69,38 +61,51 @@
   .opp .gain{color:var(--c-muted); margin:0; font-size:15px;}
   .opp .gain b{color:var(--c-accent); font-weight:700;}
 
-  /* Context / key finding */
   .ctx{background:var(--c-ctx); border-left:3px solid var(--c-accent); padding:22px 24px; margin:8px 0 0;}
-  .ctx h2{margin-top:0;}
-  .ctx p{margin-bottom:0;}
+  .ctx h2{margin-top:0;} .ctx p{margin-bottom:0;}
 
-  /* Quick wins */
-  ol.wins{margin:0; padding:0; counter-reset:w; list-style:none;}
-  ol.wins li{position:relative; padding:13px 0 13px 44px; border-bottom:1px solid var(--c-hairline);}
-  ol.wins li:last-child{border-bottom:none;}
-  ol.wins li::before{counter-increment:w; content:counter(w); position:absolute; left:0; top:11px;
-    font-family:'PT Serif',serif; font-weight:700; color:var(--c-accent); font-size:20px;}
-
-  /* Questions */
   .q-block{margin:0 0 26px;}
   .q-block h3{margin-bottom:10px; padding-bottom:7px; border-bottom:1.5px solid var(--c-rule);}
-  .q-block ul{margin:0; padding-left:20px;}
-  .q-block li{margin:0 0 7px;}
+  .q-block ul{margin:0; padding-left:20px;} .q-block li{margin:0 0 7px;}
 
-  /* CTA / footer */
+  .chart{display:flex; align-items:flex-end; gap:14px; height:180px; margin:10px 0 6px; padding-top:10px;}
+  .chart .col{flex:1; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; height:100%;}
+  .chart .bar{width:60%; max-width:46px; background:var(--c-accent); border-radius:2px 2px 0 0;}
+  .chart .val{font-size:13px; font-weight:700; color:var(--c-text); margin-bottom:5px;}
+  .chart .mon{font-size:12px; color:var(--c-muted); margin-top:6px;}
+  .legend{font-size:14px; color:var(--c-muted); margin:0 0 18px;}
+
+  .phones{list-style:none; margin:0; padding:0;}
+  .phones li{display:flex; gap:16px; padding:11px 0; border-bottom:1px solid var(--c-hairline); align-items:baseline;}
+  .phones li:last-child{border-bottom:none;}
+  .phones .num{font-family:'PT Serif',serif; font-weight:700; color:var(--c-accent); min-width:170px; font-size:16px;}
+  .phones .src{flex:1; color:var(--c-body); font-size:15px;}
+
+  .contra{padding:16px 0; border-bottom:1px solid var(--c-hairline);}
+  .contra:last-child{border-bottom:none;}
+  .contra .topic{font-weight:700; color:var(--c-text); margin:0 0 8px;}
+  .contra .pair{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  .contra .cell{background:var(--c-ctx); border-left:2px solid var(--c-rule); padding:9px 12px; font-size:14px;}
+  .contra .cell .quote{color:var(--c-body); font-style:italic;}
+  .contra .cell .lnk{display:block; margin-top:5px; font-size:12px;}
+
+  figure{margin:18px 0 4px;}
+  figure img{width:100%; height:auto; border:1px solid var(--c-rule); border-radius:4px; display:block;}
+  figcaption{font-size:13px; color:var(--c-muted); margin-top:7px;}
+  .shot2{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+
   .cta{background:var(--c-accent); color:#fff; border-radius:4px; padding:30px 28px; margin-top:8px;}
-  .cta h2{color:#fff; margin-bottom:10px;}
-  .cta p{color:#dfe5ee; margin:0 0 4px;}
+  .cta h2{color:#fff; margin-bottom:10px;} .cta p{color:#dfe5ee; margin:0 0 4px;}
   .cta .when{color:#fff; font-weight:700; margin-top:14px; font-size:17px;}
   footer.sig{padding:34px 0 60px; color:var(--c-muted); font-size:14px;}
   footer.sig b{color:var(--c-text); font-family:'PT Serif',serif;}
 
   @media (max-width:600px){
-    body{font-size:16px;}
-    h1{font-size:27px;} h2{font-size:21px;}
+    body{font-size:16px;} h1{font-size:27px;} h2{font-size:21px;}
     header.hero{padding:44px 0 30px;}
-    ul.clean li{flex-direction:column; gap:2px;}
-    ul.clean .n{min-width:0;}
+    ul.clean li{flex-direction:column; gap:2px;} ul.clean .n{min-width:0;}
+    .contra .pair{grid-template-columns:1fr;} .shot2{grid-template-columns:1fr;}
+    .phones li{flex-direction:column; gap:2px;} .phones .num{min-width:0;}
   }
 </style>
 </head>
@@ -111,21 +116,22 @@
     <p class="eyebrow">Экспресс-аудит · подготовлено к встрече</p>
     <h1>Онлайн-присутствие клиники Art Dental Gallery: где спрятан рост</h1>
     <p class="meta">Самара · пр-т Карла Маркса, 4Е · 6 июня 2026</p>
-    <p class="lead">Срез по 10+ площадкам — карты, медпорталы, агрегаторы, поиск, соцсети — по методологии аудита стоматклиники. Сделан до встречи, чтобы разговор шёл предметно, а не «расскажите о себе».</p>
+    <p class="lead">Я прошёл по 20 с лишним площадкам: карты, медпорталы, агрегаторы, рейтинги, соцсети, сам сайт. Посмотрел отзывы, телефоны, карточки врачей, динамику за 2026 год. Сделал это до встречи, чтобы говорить по делу, а не «расскажите о себе».</p>
     <span class="stamp">Подготовлено для Тогрула Сеидова · к встрече в понедельник, 8 июня, 15:00</span>
   </div>
 </header>
 
 <section>
   <div class="wrap">
-    <p class="eyebrow">Сначала — что у вас сильно</p>
-    <h2>Витрина в порядке. Это редкость</h2>
-    <p class="lead-p">По ключевым картам и работе с репутацией клиника выглядит лучше большинства. На этом фундаменте и строится дальнейший рост — поэтому начинаем с него.</p>
+    <p class="eyebrow">Сначала о сильном</p>
+    <h2>Витрина у вас в порядке. Это редкость</h2>
+    <p class="lead-p">По главным картам и работе с отзывами клиника выглядит лучше большинства в городе. На этом и строится дальнейший рост, поэтому начну с него.</p>
     <ul class="clean">
-      <li><span class="n">Яндекс</span><span class="t"><b>5,0</b> при 269 отзывах и 319 оценках, награда «Хорошее место 2026», свежий поток отзывов. Карточка заполнена под максимум — фото, услуги с ценами, часы, мессенджеры.</span></li>
-      <li><span class="n">2ГИС</span><span class="t"><b>5,0</b> при ~200 отзывах, карточка верифицирована, активна реклама.</span></li>
-      <li><span class="n">Отзывы</span><span class="t">Клиника отвечает почти на <b>100%</b> отзывов — развёрнуто и персонально. Так делают единицы. Это сильный сигнал доверия для пациента.</span></li>
-      <li><span class="n">Врач</span><span class="t">Личная карточка на ПроДокторов — рейтинг <b>4,8</b>, документы подтверждены, прайс выгружен.</span></li>
+      <li><span class="n">Яндекс Карты</span><span class="t"><b>5,0</b>, около 270 отзывов, награда «Хорошее место 2026». Карточка заполнена полностью: фото, услуги с ценами, часы, мессенджеры. <a href="https://yandex.ru/maps/org/art_dental_galleri/149995714422/" target="_blank" rel="noopener">открыть</a></span></li>
+      <li><span class="n">2ГИС</span><span class="t"><b>5,0</b>, около 200 отзывов, карточка подтверждена владельцем. <a href="https://2gis.ru/samara/firm/70000001064232811" target="_blank" rel="noopener">открыть</a></span></li>
+      <li><span class="n">Отзывы</span><span class="t">Вы отвечаете почти на каждый отзыв, развёрнуто и по-человечески. Так делают единицы. Для пациента это сильный сигнал.</span></li>
+      <li><span class="n">Врачи</span><span class="t">У четырёх из пяти проверенных врачей есть видеовизитка, у всех проверены документы. Видео доктора поднимает доверие до записи.</span></li>
+      <li><span class="n">ВКонтакте</span><span class="t">Живое сообщество с видео-подкастами главного врача. Контент вы уже умеете. <a href="https://vk.com/artdentalgallery" target="_blank" rel="noopener">открыть</a></span></li>
     </ul>
   </div>
 </section>
@@ -134,73 +140,191 @@
   <div class="wrap">
     <p class="eyebrow">Карта присутствия</p>
     <h2>Где клиника видна, а где её нет</h2>
+    <p class="lead-p">Каждую строку можно открыть и проверить.</p>
     <div class="tablewrap">
       <table>
-        <thead>
-          <tr><th>Площадка</th><th>Статус</th><th>Коротко</th></tr>
-        </thead>
+        <thead><tr><th>Площадка</th><th>Статус</th><th>Что там</th></tr></thead>
         <tbody>
-          <tr><td>Яндекс Карты</td><td class="s-strong">сильно</td><td>5,0 · 269 отзывов · полная карточка</td></tr>
-          <tr><td>2ГИС</td><td class="s-strong">сильно</td><td>5,0 · ~200 отзывов · верифицирована</td></tr>
-          <tr><td>ПроДокторов</td><td class="s-norm">норма</td><td>врач 4,8 · клиника 4,3 · нет онлайн-записи, мало фото</td></tr>
-          <tr><td>Google Карты</td><td class="s-grow">точка роста</td><td>направление недокручено — упущена часть аудитории</td></tr>
-          <tr><td>СберЗдоровье / НаПоправку</td><td class="s-grow">точка роста</td><td>карточек нет — топ-каналы записи не задействованы</td></tr>
-          <tr><td>32top.ru (рейтинг Самары)</td><td class="s-grow">точка роста</td><td>главный городской рейтинг — клиники в нём нет</td></tr>
-          <tr><td>Zoon</td><td class="s-grow">точка роста</td><td>карточка существует, но без управления</td></tr>
-          <tr><td>Сайт artdentalgallery.ru</td><td class="s-grow">точка роста</td><td>отдельные лендинги, разные телефоны, устаревшие акции</td></tr>
-          <tr><td>Соцсети и контент (VK / Дзен / Telegram)</td><td class="s-grow">точка роста</td><td>контент-канал фактически не ведётся</td></tr>
+          <tr><td><a href="https://yandex.ru/maps/org/art_dental_galleri/149995714422/" target="_blank" rel="noopener">Яндекс Карты</a></td><td class="s-strong">сильно</td><td>5,0 · ~270 отзывов · полная карточка</td></tr>
+          <tr><td><a href="https://2gis.ru/samara/firm/70000001064232811" target="_blank" rel="noopener">2ГИС</a></td><td class="s-strong">сильно</td><td>5,0 · ~200 отзывов · подтверждена</td></tr>
+          <tr><td><a href="https://vk.com/artdentalgallery" target="_blank" rel="noopener">ВКонтакте</a></td><td class="s-strong">сильно</td><td>сообщество, видео-подкасты, посты до июня 2026</td></tr>
+          <tr><td><a href="https://prodoctorov.ru/samara/lpu/91339-art-dental-galleri/" target="_blank" rel="noopener">ПроДокторов</a></td><td class="s-norm">норма</td><td>врач 4,8 · клиника 4,3 · нет онлайн-записи, 2 фото</td></tr>
+          <tr><td><a href="https://rting.ru/samara/co/art_dental_gallery/5562729" target="_blank" rel="noopener">rting.ru</a></td><td class="s-norm">норма</td><td>4,9 · 99 оценок · карточка не управляется</td></tr>
+          <tr><td><a href="https://www.32top.ru/samara/stomatologii/" target="_blank" rel="noopener">32top.ru</a></td><td class="s-grow">точка роста</td><td>есть в каталоге (4,9), но не в кураторском топ-15</td></tr>
+          <tr><td><a href="https://zoon.ru/samara/medical/stomatologicheskaya_klinika_art_dental_galleri/" target="_blank" rel="noopener">Zoon</a></td><td class="s-grow">точка роста</td><td>две карточки-дубля, обе ~2,8, без управления</td></tr>
+          <tr><td>Google Карты</td><td class="s-grow">точка роста</td><td>карточки в выдаче нет</td></tr>
+          <tr><td>СберЗдоровье, НаПоправку</td><td class="s-grow">точка роста</td><td>карточек нет, каналы записи не задействованы</td></tr>
+          <tr><td>Дзен, Instagram</td><td class="s-grow">точка роста</td><td>каналов нет, контент только во ВКонтакте</td></tr>
         </tbody>
       </table>
     </div>
-    <p style="margin-top:18px; font-size:15px; color:var(--c-muted);">Из 9 ключевых площадок: <b style="color:var(--c-accent);">2</b> работают на максимум, <b style="color:var(--c-accent);">1</b> в норме, <b style="color:var(--c-accent);">6</b> недозагружены или не задействованы.</p>
+    <p style="margin-top:18px; font-size:15px; color:var(--c-muted);">Карты и отзывы работают. Провисает другое: каналы записи, единый сайт и аналитика. Дальше по порядку.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Динамика отзывов 2026</p>
+    <h2>Отзывы идут только на 2ГИС. Яндекс замер</h2>
+    <p class="lead-p">Отзывы дают около 30% веса карточки в выдаче карт. Поэтому важно не только сколько их всего, но и капают ли они сейчас. Картина за 2026 год разная по площадкам.</p>
+
+    <h3 style="margin-top:8px;">2ГИС: живая лента, но темп падает к весне</h3>
+    <div class="chart" aria-hidden="true">
+      <div class="col"><span class="val">≈11</span><div class="bar" style="height:69%"></div><span class="mon">Янв</span></div>
+      <div class="col"><span class="val">≈16</span><div class="bar" style="height:100%"></div><span class="mon">Фев</span></div>
+      <div class="col"><span class="val">≈9</span><div class="bar" style="height:56%"></div><span class="mon">Мар</span></div>
+      <div class="col"><span class="val">≈3</span><div class="bar" style="height:19%"></div><span class="mon">Апр</span></div>
+      <div class="col"><span class="val">≈6</span><div class="bar" style="height:38%"></div><span class="mon">Май</span></div>
+      <div class="col"><span class="val">1+</span><div class="bar" style="height:8%"></div><span class="mon">Июн</span></div>
+    </div>
+    <p class="legend">Числа считаю по датам ваших ответов на отзывы. Точные даты 2ГИС боту не отдаёт, поэтому это минимум. Пик в феврале, дальше спад к апрелю и маю. Последний отзыв был 1 июня.</p>
+
+    <h3>Яндекс Карты: поток остановился</h3>
+    <p>Последний отзыв на Яндексе оставили <b>18 декабря 2025</b>. За весь 2026 год новых нет. При том что это ваша главная карта по трафику, и там уже накоплено около 270 отзывов. Актив есть, но он замер.</p>
+    <p>ПроДокторов даёт единичные отзывы: видно 3 за 2026 год, январь и февраль. Канал второстепенный, всего 36 отзывов.</p>
+    <figure>
+      <img src="shots/yandex.png" alt="Карточка клиники на Яндекс Картах">
+      <figcaption>Карточка на Яндекс Картах: рейтинг и отзывы накоплены, но поток встал в декабре 2025.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Врачи на ПроДокторов</p>
+    <h2>Команда видна, но запись только по телефону</h2>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Врач</th><th>Профиль</th><th>Рейтинг</th><th>Отзывов</th><th>Видеовизитка</th></tr></thead>
+        <tbody>
+          <tr><td><a href="https://prodoctorov.ru/samara/vrach/162588-seidov/" target="_blank" rel="noopener">Сеидов Т. А.</a> (главврач)</td><td>имплантолог, ортопед, хирург</td><td>4,8</td><td>17</td><td>есть</td></tr>
+          <tr><td><a href="https://prodoctorov.ru/samara/vrach/496807-yarullin/" target="_blank" rel="noopener">Яруллин Б. И.</a></td><td>ортопед</td><td>5,0</td><td>27</td><td>есть</td></tr>
+          <tr><td><a href="https://prodoctorov.ru/samara/vrach/954958-mahmutov/" target="_blank" rel="noopener">Махмутов Р. С.</a></td><td>терапевт, эндодонт</td><td>5,0</td><td>19</td><td>нет</td></tr>
+          <tr><td><a href="https://prodoctorov.ru/samara/vrach/749812-zyaynalov/" target="_blank" rel="noopener">Зейналов Ф. Э.</a></td><td>терапевт, хирург</td><td>5,0</td><td>16</td><td>есть</td></tr>
+          <tr><td><a href="https://prodoctorov.ru/samara/vrach/1270602-nugaeva/" target="_blank" rel="noopener">Нугаева А. Ф.</a></td><td>ортодонт</td><td>3,1</td><td>2</td><td>есть</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:16px; font-size:15px; color:var(--c-muted);">В карточке клиники значатся 9 врачей. У ещё четверых полных карточек на ПроДокторов я не нашёл, поэтому не привожу. Лучше уточнить у вас. Рейтинг 3,1 у ортодонта это особенность площадки при двух отзывах. Не оценка работы.</p>
+    <p>Два момента по записи. Первое: <b>онлайн-записи нет ни у одного врача</b>, только «уточняйте по телефону». Второе: первичный приём платный, 3 000 ₽ у вас, 2 000 ₽ у врача, 1 000 ₽ детский. На лендинге при этом обещана «бесплатная консультация ортодонта». Оба момента про вход пациента в клинику. Обсудим на встрече.</p>
+    <figure>
+      <img src="shots/prodoctorov.png" alt="Карточка клиники на ПроДокторов">
+      <figcaption>Карточка клиники на ПроДокторов: лицензия проверена, 9 врачей, рейтинг 4,3.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Телефоны</p>
+    <h2>Семь разных номеров на одну клинику</h2>
+    <p class="lead-p">Вот какие номера засветились и где. Не спешу с выводом, что учёта нет. Разные номера по каналам это и есть коллтрекинг, когда видно, с какого канала пришёл звонок. Вопрос в другом: сведены ли они в одну систему, видите ли вы по ним, какой канал приводит пациента. На встрече посмотрим.</p>
+    <ul class="phones">
+      <li><span class="num">846 379-63-42</span><span class="src">Яндекс Карты, 2ГИС</span></li>
+      <li><span class="num">960 812-70-46</span><span class="src">ПроДокторов (клиника и врач)</span></li>
+      <li><span class="num">903 309-23-81</span><span class="src">Zoon</span></li>
+      <li><span class="num">846 221-01-43</span><span class="src">сайт, лендинги</span></li>
+      <li><span class="num">846 221-01-45</span><span class="src">сайт, главная (второй номер на той же странице)</span></li>
+      <li><span class="num">987 436-99-66</span><span class="src">ВКонтакте</span></li>
+      <li><span class="num">903 301-01-45</span><span class="src">посты в Яндекс Картах</span></li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Сайт и лендинги</p>
+    <h2>Лендинги под кампании это правильно. Проблема в нестыковках</h2>
+    <p class="lead-p">Отдельные лендинги под имплантацию и ортодонтию это нормальная рабочая стратегия под рекламу. Вопросов нет. Вопрос в другом: данные на них спорят друг с другом и устарели. Пациент это видит, и доверие падает. Конкретно, с цитатами и ссылками.</p>
+
+    <div class="contra">
+      <p class="topic">Часы работы спорят внутри одного лендинга</p>
+      <div class="pair">
+        <div class="cell"><span class="quote">«Режим работы: 9:00 до 20:00»</span><a class="lnk" href="https://artdentalgallery.ru/brekety-i-elajnery" target="_blank" rel="noopener">шапка лендинга →</a></div>
+        <div class="cell"><span class="quote">«Режим работы: 8:00 до 21:00»</span><a class="lnk" href="https://artdentalgallery.ru/brekety-i-elajnery" target="_blank" rel="noopener">подвал той же страницы →</a></div>
+      </div>
+    </div>
+
+    <div class="contra">
+      <p class="topic">Рейтинг разный на каждой странице, и оба не сходятся с реальным</p>
+      <div class="pair">
+        <div class="cell"><span class="quote">«рейтинг 5.0» на главной, «рейтинг 4.9» на ортодонтии</span><a class="lnk" href="https://artdentalgallery.ru/" target="_blank" rel="noopener">сайт →</a></div>
+        <div class="cell"><span class="quote">реальный на ПроДокторов: 4,3 (клиника 4,2)</span><a class="lnk" href="https://prodoctorov.ru/samara/lpu/91339-art-dental-galleri/" target="_blank" rel="noopener">ПроДокторов →</a></div>
+      </div>
+    </div>
+
+    <div class="contra">
+      <p class="topic">Два разных телефона на одной странице</p>
+      <div class="pair">
+        <div class="cell"><span class="quote">«+7 (846) 221-01-45»</span><a class="lnk" href="https://artdentalgallery.ru/" target="_blank" rel="noopener">главная →</a></div>
+        <div class="cell"><span class="quote">«+7 (846) 221-01-43»</span><a class="lnk" href="https://artdentalgallery.ru/" target="_blank" rel="noopener">та же главная →</a></div>
+      </div>
+    </div>
+
+    <div class="contra">
+      <p class="topic">Вечная акция и замороженные цифры</p>
+      <div class="pair">
+        <div class="cell"><span class="quote">«Оставь заявку до 31 марта и получи 3 подарка». Года нет, висит постоянно</span><a class="lnk" href="https://artdentalgallery.ru/brekety-i-elajnery" target="_blank" rel="noopener">лендинг →</a></div>
+        <div class="cell"><span class="quote">«&gt;50 счастливых пациентов за 2023 год», «200 часов … к 2023 году»</span><a class="lnk" href="https://artdentalgallery.ru/brekety-i-elajnery" target="_blank" rel="noopener">лендинг →</a></div>
+      </div>
+    </div>
+
+    <div class="contra">
+      <p class="topic">Черновик попал в продакшен и проиндексирован</p>
+      <div class="pair">
+        <div class="cell"><span class="quote">«Copy of Установка брекетов в Самаре от 100.000 руб», блок рейтинга повторён дважды</span><a class="lnk" href="https://artdentalgallery.ru/page44114163.html" target="_blank" rel="noopener">страница →</a></div>
+        <div class="cell"><span class="quote">«бесплатная консультация ортодонта» на сайте против «диагностический приём 15 000 ₽» в прайсе</span><a class="lnk" href="https://prodoctorov.ru/samara/lpu/91339-art-dental-galleri/" target="_blank" rel="noopener">прайс ПД →</a></div>
+      </div>
+    </div>
+
+    <div class="shot2">
+      <figure>
+        <img src="shots/site_main.png" alt="Главная сайта, имплантация">
+        <figcaption>Главная сайта, лендинг имплантации.</figcaption>
+      </figure>
+      <figure>
+        <img src="shots/site_brekety.png" alt="Лендинг брекеты и элайнеры">
+        <figcaption>Лендинг ортодонтии. На нём и расходятся часы работы.</figcaption>
+      </figure>
+    </div>
+    <p style="margin-bottom:0; color:var(--c-muted); font-size:15px;">Нужен один сайт с актуальными ценами, рейтингом и единым номером. Лендинги под рекламу оставляем, но синхронизируем с ним.</p>
   </div>
 </section>
 
 <section>
   <div class="wrap">
     <p class="eyebrow">Точки роста</p>
-    <h2>Семь мест, где загрузка прячется — без роста бюджета</h2>
+    <h2>Где загрузка прячется. Почти без бюджета</h2>
 
     <div class="opp">
-      <h3>1. Google Карты</h3>
-      <p class="now">Часть пациентов ищет на Google и iPhone — для них клиники на привычной карте сейчас фактически не видно.</p>
-      <p class="gain"><b>Что даёт:</b> бесплатный канал, который ощутимо добирает аудиторию iPhone и тех, кто ищет через Google. Затраты — ноль.</p>
+      <h3>Google Карты</h3>
+      <p class="now">Карточки в выдаче нет. Часть пациентов ищет через Google и iPhone, и для них клиники на их карте не видно.</p>
+      <p class="gain"><b>Что даёт:</b> бесплатный канал и аудитория, которую сейчас не видно. Завести и заполнить как Яндекс.</p>
     </div>
-
     <div class="opp">
-      <h3>2. СберЗдоровье и НаПоправку</h3>
-      <p class="now">Карточек нет ни у клиники, ни у врача. А это одни из ключевых медпорталов после ПроДокторов — с онлайн-записью.</p>
-      <p class="gain"><b>Что даёт:</b> ещё два канала записи и сбора отзывов на площадках, которые пациент проверяет перед выбором клиники.</p>
+      <h3>СберЗдоровье и НаПоправку</h3>
+      <p class="now">Карточек нет. Это медпорталы с онлайн-записью, которые пациент проверяет перед выбором клиники.</p>
+      <p class="gain"><b>Что даёт:</b> ещё два канала записи и сбора отзывов.</p>
     </div>
-
     <div class="opp">
-      <h3>3. Онлайн-запись на ПроДокторов</h3>
-      <p class="now">Сейчас «свободной записи нет, уточняйте по телефону». Запись не подключена ни к одному врачу, плюс на карточке клиники всего пара фото.</p>
-      <p class="gain"><b>Что даёт:</b> онлайн-запись поднимает карточку в выдаче портала и убирает потерю пациентов, которые не любят звонить.</p>
+      <h3>Онлайн-запись на ПроДокторов</h3>
+      <p class="now">Сейчас «уточняйте по телефону» у всех врачей. Запись не подключена.</p>
+      <p class="gain"><b>Что даёт:</b> подъём карточки в выдаче портала и пациенты, которые не любят звонить.</p>
     </div>
-
     <div class="opp">
-      <h3>4. Городской рейтинг 32top.ru</h3>
-      <p class="now">Выдачу по стоматологии в Самаре во многом держит портал-рейтинг 32top (сотни клиник, тысячи отзывов). Клиники в его рейтингах нет — конкуренты там есть.</p>
-      <p class="gain"><b>Что даёт:</b> присутствие в главном городском рейтинге = поток пациентов, которые сравнивают клиники именно там.</p>
+      <h3>Яндекс: разморозить отзывы</h3>
+      <p class="now">На главной карте поток отзывов встал с декабря 2025. Сбор идёт только на 2ГИС.</p>
+      <p class="gain"><b>Что даёт:</b> свежие отзывы держат позицию карточки. Простая система сбора (QR на ресепшене, мотивация администраторов) запускает поток обратно.</p>
     </div>
-
     <div class="opp">
-      <h3>5. Карточка на Zoon — без управления</h3>
-      <p class="now">Карточка существует, но не заявлена владельцем и живёт сама по себе — с низким рейтингом, который тянет вниз средний по площадкам.</p>
-      <p class="gain"><b>Что даёт:</b> заявить права, заполнить и подключить сбор отзывов — рейтинг выправляется за пару месяцев.</p>
+      <h3>Zoon: закрыть дубль</h3>
+      <p class="now">Две карточки-дубля, обе около 2,8, ни одна не заявлена владельцем.</p>
+      <p class="gain"><b>Что даёт:</b> убрать задвоение, заявить права, поднять рейтинг сбором отзывов.</p>
     </div>
-
     <div class="opp">
-      <h3>6. Профиль врача работает на чужие адреса</h3>
-      <p class="now">На части агрегаторов сильный профиль главного врача (с работами «до/после») привязан к прежним местам работы, а не к Art Dental Gallery.</p>
-      <p class="gain"><b>Что даёт:</b> перепривязка возвращает в клинику пациентов, которые сейчас уходят по чужим телефонам.</p>
-    </div>
-
-    <div class="opp">
-      <h3>7. Сайт и единый контакт</h3>
-      <p class="now">Вместо единого сайта — отдельные лендинги под имплантацию и брекеты, на которых разные телефоны, устаревшие акции и противоречивые данные.</p>
-      <p class="gain"><b>Что даёт:</b> единый сайт + один отслеживаемый номер = понятная точка входа и возможность видеть, какой канал реально приводит пациентов.</p>
+      <h3>32top и каталоги</h3>
+      <p class="now">Клиника есть в общем каталоге 32top (4,9), но не в кураторском топе города, где стоят конкуренты.</p>
+      <p class="gain"><b>Что даёт:</b> попасть в топ городского рейтинга, где сравнивают клиники.</p>
     </div>
   </div>
 </section>
@@ -208,106 +332,61 @@
 <section>
   <div class="wrap ctx">
     <p class="eyebrow">Главный вывод</p>
-    <h2>Дело не в количестве трафика, а в управляемости</h2>
-    <p>Витрина у клиники сильная — карты, рейтинги, отзывы работают. Но за ней нет управленческого слоя: на сайте и в карточках несколько разных телефонов, и ни один не отслеживается. Значит, нельзя точно сказать, какой рубль рекламы привёл пациента, а какой ушёл в пустоту. Поэтому добавлять рекламный бюджет — всё равно что лить воду в воронку, у которой не видно дна. Сначала возвращается управляемость — какой канал грузит клинику и какая на каждом конверсия. И загрузка растёт на том же бюджете.</p>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <p class="eyebrow">С чего начать</p>
-    <h2>Быстрые шаги — почти без затрат</h2>
-    <ol class="wins">
-      <li>Завести и заявить карточку Google Карт — продублировать туда фото, часы, услуги.</li>
-      <li>Заявить права на карточку Zoon и подключить сбор отзывов.</li>
-      <li>Включить онлайн-запись на ПроДокторов для всех врачей.</li>
-      <li>Поставить отслеживаемые номера по каждому каналу и свести недельную таблицу «обращения → записи → приход» по источникам.</li>
-      <li>Запустить системный сбор отзывов на ровном темпе — QR на ресепшене и мотивация администраторов.</li>
-      <li>Перенести контент в «Новости» Яндекса и истории 2ГИС — бесплатная органика вместо простаивающих соцсетей.</li>
-    </ol>
+    <h2>Витрина сильная. Единой картины нет</h2>
+    <p>Карты, отзывы, врачи, ВКонтакте работают. Но за витриной всё живёт по отдельности. Семь номеров по площадкам. Часы, цены и рейтинг расходятся между сайтом и карточками. На Яндексе отзывы встали с декабря, на 2ГИС идут. Главный вопрос к встрече простой: видите ли вы по цифрам, какой канал приводит пациента и сколько он стоит. Если да, добавляем бюджет точечно. Если картина рассыпана, сначала собираем её, и загрузка растёт на тех же деньгах.</p>
   </div>
 </section>
 
 <section>
   <div class="wrap">
     <p class="eyebrow">К встрече</p>
-    <h2>Вопросы, чтобы подготовиться заранее</h2>
-    <p class="lead-p">На все навскидку отвечать не обязательно — что знаете по памяти, остальное разберём на звонке. Они помогут за 30–40 минут увидеть, где клиника недозарабатывает. Это уже взгляд внутрь — то, чего не видно снаружи.</p>
+    <h2>Вопросы, чтобы подготовиться</h2>
+    <p class="lead-p">На всё навскидку отвечать не нужно. Что знаете по памяти, остальное обсудим на звонке. Это уже взгляд внутрь, на то, что снаружи не видно.</p>
 
-    <div class="q-block">
-      <h3>1. Структура и цифры</h3>
-      <ul>
-        <li>Сколько кресел и врачей, по каким направлениям (терапия, ортопедия, имплантация, ортодонтия, хирургия)?</li>
-        <li>Оборот — это выручка по кассе или по оказанным услугам? Какая примерно прибыль остаётся собственнику?</li>
-        <li>Средний чек первичного пациента и средний чек повторного?</li>
-      </ul>
-    </div>
-
-    <div class="q-block">
-      <h3>2. Финансы</h3>
-      <ul>
-        <li>Какой процент выручки уходит на зарплаты? На аренду? На расходники?</li>
-        <li>Знаете ли маржинальность по направлениям — какое приносит деньги, какое работает «в ноль»?</li>
-      </ul>
-    </div>
-
-    <div class="q-block">
-      <h3>3. Загрузка и мощность</h3>
-      <ul>
-        <li>Насколько кресла реально загружены — в процентах от максимума по часам?</li>
-        <li>Где видите простой: окна в расписании, врачи без записи, кресло без врача?</li>
-      </ul>
-    </div>
-
-    <div class="q-block">
-      <h3>4. Маркетинг и воронка</h3>
-      <ul>
-        <li>Из каких источников идут пациенты и какой по каждому примерно возврат на вложенное (что окупается, что нет)?</li>
-        <li>Воронка по этапам: сколько обращений в месяц → сколько записей → сколько доходит до приёма?</li>
-        <li>Реферальная система — какую долю первичных сейчас даёт?</li>
-      </ul>
-    </div>
-
-    <div class="q-block">
-      <h3>5. Колл-центр и работа с базой</h3>
-      <ul>
-        <li>Кто звонит по базе — администраторы, отдельный оператор, маркетолог? Есть ли скрипт?</li>
-        <li>Какая конверсия обзвона базы в запись — и это процент от всей базы, от дозвонившихся или за один цикл обзвона?</li>
-        <li>Какой процент записавшихся реально доходит до приёма? Подтверждаете запись накануне?</li>
-      </ul>
-    </div>
-
-    <div class="q-block">
-      <h3>6. Первичный приём и план лечения</h3>
-      <ul>
-        <li>Кто ведёт и презентует план лечения — врач сам или отдельный куратор?</li>
-        <li>Какая доля первичных уходит с подписанным комплексным планом? Какой процент планов доводится до конца?</li>
-        <li>Комплексное лечение часто упирается в имплантацию и большие планы — как сейчас диагностируете без своего КТ? На каком этапе чаще теряете пациента с большим планом?</li>
-      </ul>
-    </div>
-
-    <div class="q-block">
-      <h3>7. Команда и управление</h3>
-      <ul>
-        <li>Кто управляет клиникой операционно — Вы сами или есть управляющий?</li>
-        <li>Есть ли регулярные планёрки, дашборд с цифрами, регламенты у ключевых ролей?</li>
-      </ul>
-    </div>
-
-    <div class="q-block">
-      <h3>8. Цель</h3>
-      <ul>
-        <li>К какой выручке хотите выйти и к какому сроку? Что, на Ваш взгляд, сейчас сильнее всего мешает?</li>
-      </ul>
-    </div>
+    <div class="q-block"><h3>1. Структура и цифры</h3><ul>
+      <li>Сколько кресел и врачей, по каким направлениям (терапия, ортопедия, имплантация, ортодонтия, хирургия)?</li>
+      <li>Оборот это выручка по кассе или по оказанным услугам? Какая примерно прибыль остаётся собственнику?</li>
+      <li>Какой LTV пациента, сколько он в среднем приносит за всё время лечения и наблюдения? Как он изменился: 2025 против 2026?</li>
+    </ul></div>
+    <div class="q-block"><h3>2. Финансы</h3><ul>
+      <li>Какой процент выручки уходит на зарплаты? На аренду? На расходники?</li>
+      <li>Знаете ли маржинальность по направлениям, какое приносит деньги, какое работает «в ноль»?</li>
+    </ul></div>
+    <div class="q-block"><h3>3. Загрузка и мощность</h3><ul>
+      <li>Насколько кресла реально загружены, в процентах от максимума по часам?</li>
+      <li>Где видите простой: окна в расписании, врачи без записи, кресло без врача?</li>
+    </ul></div>
+    <div class="q-block"><h3>4. Маркетинг и воронка</h3><ul>
+      <li>Семь номеров по площадкам: это коллтрекинг или так сложилось? Сведена ли запись по источникам в одну таблицу?</li>
+      <li>Воронка по этапам: сколько обращений в месяц → сколько записей → сколько доходит до приёма?</li>
+      <li>Реферальная система: какую долю первичных даёт?</li>
+    </ul></div>
+    <div class="q-block"><h3>5. Колл-центр и работа с базой</h3><ul>
+      <li>Кто звонит по базе: администраторы, отдельный оператор, маркетолог? Есть ли скрипт?</li>
+      <li>Какая конверсия обзвона базы в запись? И это процент от всей базы, от дозвонившихся или за один цикл?</li>
+      <li>Какой процент записавшихся доходит до приёма? Подтверждаете запись накануне?</li>
+    </ul></div>
+    <div class="q-block"><h3>6. Первичный приём и план лечения</h3><ul>
+      <li>Первичный приём платный (3 000 ₽ у главного врача). Не теряете ли на этом часть первички, которая до клиники не доходит?</li>
+      <li>Кто ведёт и презентует план лечения: врач сам или отдельный куратор?</li>
+      <li>Какая доля первичных уходит с подписанным комплексным планом? Какой процент планов доводится до конца?</li>
+      <li>Комплексное лечение упирается в имплантацию и большие планы. Как диагностируете без своего КТ? Где чаще теряете пациента с большим планом?</li>
+    </ul></div>
+    <div class="q-block"><h3>7. Команда и управление</h3><ul>
+      <li>Кто управляет клиникой операционно: Вы сами или есть управляющий?</li>
+      <li>Есть ли регулярные планёрки, дашборд с цифрами, регламенты у ключевых ролей?</li>
+    </ul></div>
+    <div class="q-block"><h3>8. Цель</h3><ul>
+      <li>К какой выручке хотите выйти и к какому сроку? Что, на Ваш взгляд, сейчас сильнее всего мешает?</li>
+    </ul></div>
   </div>
 </section>
 
 <section>
   <div class="wrap">
     <div class="cta">
-      <h2>Это то, что видно снаружи за час</h2>
-      <p>На встрече разберём изнутри — финансы, конверсию первичных в план лечения, загрузку кресел. Там, где обычно и спрятаны основные деньги.</p>
+      <h2>Это то, что видно снаружи за пару часов</h2>
+      <p>На встрече посмотрим изнутри: финансы, конверсию первичных в план лечения, загрузку кресел. Там обычно и лежат основные деньги.</p>
       <p class="when">Zoom · понедельник, 8 июня, 15:00</p>
     </div>
   </div>
@@ -316,7 +395,7 @@
 <footer class="sig">
   <div class="wrap">
     <b>Владимир Сивергин</b> · бизнес-трекинг стоматологических клиник<br>
-    Аудит подготовлен по открытым данным площадок на 6 июня 2026. Цифры по карточкам могут отличаться на несколько отзывов от даты подготовки.
+    Аудит собран по открытым данным площадок на 6 июня 2026. Счётчики отзывов могут отличаться на несколько штук от даты сбора.
   </div>
 </footer>
 
